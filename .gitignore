@@ -35,7 +35,6 @@
 !bin/console
 !bin/symfony_requirements
 /vendor/
-/public/archive_pdf/
 # Assets and user uploads
 /web/bundles/
 /web/uploads/
@@ -50,16 +49,8 @@
 # Composer PHAR
 /composer.phar
 
-# Backup entities generated with doctrine:generate:entities command
-**/Entity/*~
-
 # Embedded web-server pid file
 /.web-server-pid
 
-/pages/ajax/visio/
-### Symfony Patch ###
-/web/css/
-/web/js/
-/upload/*
 
 # End of https://www.gitignore.io/api/symfony
