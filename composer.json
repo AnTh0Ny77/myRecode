@@ -1,5 +1,9 @@
 {
+    "autoload": {
+        "psr-4" : {"Src\\" : "Src"}
+    },
     "require": {
-        "twig/twig": "3.0"
+        "twig/twig": "3.0",
+        "guzzlehttp/guzzle": "7.0"
     }
 }

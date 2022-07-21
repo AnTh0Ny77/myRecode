@@ -1,5 +1,9 @@
 {
+    "baseUrl": {
+        "url": "/baseUrl/"
+    }, 
     "AuthService": {
         "url": "www.base4Auth.com/api/auth"
     }
+
 }

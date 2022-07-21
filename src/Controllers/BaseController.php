@@ -1,8 +1,6 @@
 <?php
-
-namespace src\Controllers;
+namespace Src\Controllers;
 require_once  '././vendor/autoload.php';
-
 
 Class BaseController 
 {
@@ -12,7 +10,7 @@ Class BaseController
 	protected static function init()
 	{
        
-		$loader = new \Twig\Loader\FilesystemLoader('./public/template/');
+		$loader = new \Twig\Loader\FilesystemLoader('./public/templates/');
        	self::$twig = new \Twig\Environment($loader, [
            'debug' => true,
            'cache' => false,
