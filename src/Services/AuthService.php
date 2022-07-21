@@ -1,6 +1,6 @@
 <?php
 namespace Src\Services;
-require_once  './././vendor/autoload.php';
+require  '././vendor/autoload.php';
 use GuzzleHttp\Client;
 
 class AuthService {

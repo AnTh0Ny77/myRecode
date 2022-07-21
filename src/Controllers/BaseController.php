@@ -1,6 +1,6 @@
 <?php
 namespace Src\Controllers;
-require_once  '././vendor/autoload.php';
+require  '././vendor/autoload.php';
 
 Class BaseController 
 {
