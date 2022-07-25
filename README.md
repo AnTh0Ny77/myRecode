@@ -33,7 +33,7 @@ $security->login($username, $pass);
 
 ## Routing and controllers/Examples
 first of all you must correctly configure your .htaccess 
-file so that all redirections point to the index.php file.
+file so that all redirections redirect to the index.php file.
 if no math is found when calling the route, the default condition will run,
 consider defining a 404 page display controller or a redirect condition.
 
