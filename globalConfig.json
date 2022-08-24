@@ -1,9 +1,9 @@
 {
     "baseUrl": {
-        "url": "/baseUrl/"
+        "url": "/myRecode/"
     }, 
     "AuthService": {
-        "url": "https://explorelab.app"
+        "url": "http://localhost"
     }
 
 }

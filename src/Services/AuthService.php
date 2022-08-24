@@ -18,7 +18,7 @@ class AuthService {
 
     public function logIn($username , $password){
         try {
-            $response = $this->Client->post('/api/login',  ['json' => ['username' => $username, 'password' => $password]]);
+            $response = $this->Client->post('/restAPI/login',  ['json' => ['username' => $username, 'password' => $password]]);
         } catch (ClientException $exeption) {
             $response = $exeption->getResponse();
         }
