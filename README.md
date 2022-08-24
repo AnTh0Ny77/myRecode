@@ -1,4 +1,4 @@
-# PHP-DB-less 
+# MyRecode
 
 a light mvc php architecture, to work as a client-server application without using frontend framework
 
