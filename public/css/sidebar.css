@@ -1,0 +1,87 @@
+
+.sidebar{
+
+    position: absolute;
+    width: 20%;
+    min-width: 300px;
+    min-height: 90vh;
+    left: 27px;
+    top: 23px;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 20px;
+}
+
+.exploreSide{
+   
+    margin: 8% auto;
+    width: 139px;
+    height: 30px;
+    background-image:  url('../images/explorelab.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.qr-link{
+
+    margin: 7% auto 1%;
+    height: 93.51px;
+    width: 93.51px;
+    cursor: pointer;
+    background: #FABC43;
+    border-radius: 10px;
+    background-image: url('../images/qr-link.JPG');
+    background-repeat: no-repeat;
+    background-size: 68% 68%;
+    background-position: center;
+}
+
+
+.user-image {
+
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+.side-link{
+
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #8A8A8A;
+}
+
+.side-link-actif{
+    text-decoration: none;
+    border: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3F3F3F;
+}
+
+.side-link-actif:hover{
+    color: #FABC43;
+}
+
+.side-link:hover {
+    color: #FABC43;
+}
+
+.picto-actif{
+    color: #FABC43;
+}
+
+.picto-inactif{
+    color: #8A8A8A;
+}
+
+.wrapper-link{
+    margin-left: 25%;
+}
