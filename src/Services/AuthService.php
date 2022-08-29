@@ -4,6 +4,7 @@ require  '././vendor/autoload.php';
 use GuzzleHttp\Client;
 use Src\Entities\User;
 use GuzzleHttp\Exception\ClientException;
+Use Src\Services\MappingServices;
 
 class AuthService {
 
@@ -17,8 +18,10 @@ class AuthService {
     }
 
     public function logIn($username , $password){
+        
         try {
-            $response = $this->Client->post('/restAPI/login',  ['json' => ['username' => $username, 'password' => $password]]);
+            $response = $this->Client->post('/RESTapi/login',  ['json' => ['user__mail' => $username, 'user__password' => $password]]);
+            
         } catch (ClientException $exeption) {
             $response = $exeption->getResponse();
         }
@@ -28,17 +31,19 @@ class AuthService {
     }
 
     public function loginHandler($response){
+        $mappingService = new MappingServices();
         if (intval($response->getStatusCode()) == 200 ) {
             $response = json_decode($response->getBody()->read(1024));
             try {
-                $user = $this->Client->get('/api/user/me', ['headers' => $this->makeHeaders($response)]);
+                $user = $this->Client->get('/RESTapi/user', ['headers' => $this->makeHeaders($response)]);
+                
             } catch(ClientException $exeption) {
                 $user = $exeption->getResponse();
             }
             
             if (intval($user->getStatusCode()) == 200) {
                 $user = json_decode($user->getBody()->read(1024));
-                $user = new User($user->id , $user->email , $user->username , $user->roles , $response->token , $response->refresh_token );
+                $user = $mappingService->map($user[0],User::class);
                 if ($user instanceof User) {
                     return $user;
                 }
@@ -59,7 +64,8 @@ class AuthService {
     }
 
     public function makeHeaders($response){
-        $headers = ['Authorization' => 'Bearer ' . $response->token, 'Accept' => 'application/json'];
+        
+        $headers = ['Authorization' => 'Bearer ' . $response[0]->token, 'Accept' => 'application/json'];
         return $headers;
     }
 

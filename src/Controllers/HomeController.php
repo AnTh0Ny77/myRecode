@@ -17,7 +17,7 @@ class HomeController extends BaseController
         $alert = false;
 
         if(!$Security->guard($_SESSION['user']))
-            header('location: login');
+            header('location: ');
 
         return self::$twig->render(
             'home.html.twig',

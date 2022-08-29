@@ -13,18 +13,19 @@ Class IndexController extends BaseController
         self::init();
         $alert = false ;
 
-        if (!empty($_POST['username']) && !empty($_POST['password'])) 
-            $user =  $Security->login($_POST['username'] , $_POST['password'] );
-        
+        if (!empty($_POST['user__mail']) && !empty($_POST['user__password'])) 
+            $user =  $Security->login($_POST['user__mail'] , $_POST['user__password'] );
+            var_dump($user);
+            die();
+            
         if (!empty($user ) and !$user instanceof User) 
-            $alert = [ "message" => 'identifiants invalides' , 'username' =>  $_POST['username'] , 'password' =>   $_POST['password']];
+            $alert = [ "message" => 'identifiants invalides' , 'username' =>  $_POST['user__mail'] , 'password' =>   $_POST['user__password']];
 
         if (!empty($user) and $user instanceof User) 
             $_SESSION['user'] =  $user;
 
         if (isset($_SESSION['user']) and $_SESSION['user'] instanceof User) 
-            return header('location: home');
-
+            return header('location: /home');
         
         return self::$twig->render(
             'login.html.twig',[

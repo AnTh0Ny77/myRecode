@@ -12,6 +12,8 @@ class User{
 
     public $user__mail;
 
+    public $user__password;
+
     public $user__service;
 
     public $user__fonction;
@@ -31,6 +33,10 @@ class User{
     public $token;
 
     public $refresh_token;
+
+    public $clients;
+
+    public $roles;
 
     
     public function getUser__id(){
@@ -127,7 +133,6 @@ class User{
         return $this->user__d_creat;
     }
 
-   
     public function setUser__d_creat($user__d_creat){
         $this->user__d_creat = $user__d_creat;
 
@@ -138,7 +143,6 @@ class User{
         return $this->user__d_off;
     }
 
-    
     public function setUser__d_off($user__d_off){
         $this->user__d_off = $user__d_off;
 
@@ -155,7 +159,6 @@ class User{
         return $this;
     }
 
-    
     public function getRefresh_token(){
         return $this->refresh_token;
     }
@@ -163,6 +166,68 @@ class User{
    
     public function setRefresh_token($refresh_token){
         $this->refresh_token = $refresh_token;
+
+        return $this;
+    }
+
+    public function getClients(){
+        return $this->client;
+    }
+
+    public function setClients($client){
+        $this->clients = $client;
+
+        return $this;
+    }
+
+   
+    public function getUser__password(){
+        return $this->user__password;
+    }
+
+   
+    public function setUser__password($user__password){
+        $this->user__password = null;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of user__chrono
+     */ 
+    public function getUser__chrono()
+    {
+        return $this->user__chrono;
+    }
+
+    /**
+     * Set the value of user__chrono
+     *
+     * @return  self
+     */ 
+    public function setUser__chrono($user__chrono)
+    {
+        $this->user__chrono = $user__chrono;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of roles
+     */ 
+    public function getRoles()
+    {
+        return $this->roles;
+    }
+
+    /**
+     * Set the value of roles
+     *
+     * @return  self
+     */ 
+    public function setRoles($roles)
+    {
+        $this->roles = $roles;
 
         return $this;
     }
