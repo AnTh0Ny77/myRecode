@@ -13,19 +13,19 @@ if (isset($get_request[1]))
 if (!isset($getRequest[1])) 
 	$getData = '';
 
-$config =  json_decode(file_get_contents('globalConfig.json'));
+$config =  json_decode(file_get_contents('config.json'));
 $globalRequest = $getRequest[0] . $getData; 
 
 switch ($globalRequest){
-    case $config->baseUrl->url.'':
+    case $config->urls->base.'':
         echo index::index();
         break;
 
-    case $config->baseUrl->url.'/login':
+    case $config->urls->base.'/login':
         echo index::index();
         break;
 
-    case $config->baseUrl->url.'/home':
+    case $config->urls->base.'/home':
         echo home::index();
         break;
     
