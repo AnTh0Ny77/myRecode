@@ -1,16 +1,12 @@
 {% extends 'base.html.twig' %}
-{% block style %}
-<link rel="stylesheet" href="public/css/sidebar.css">
-
-{% endblock %}
+    {% block style %}
+    {% endblock %}
 {% block main %}
-{% include "elements/navbar.html.twig" %}
-{% include "elements/sidebar.html.twig" %}
-<main class=" d-flex">
-  
-  
-</main>
+    {% include "elements/navbar.html.twig" %}
+        <main class=" d-flex">
+            <div class="container"> Utilisateur <b>{{user.user__mail}}</b> connecté</div>
+        {{dump(user)}}
+        </main>
 {% endblock %}
-{% block script %}
-
-{% endblock %}
+    {% block script %}
+    {% endblock %}

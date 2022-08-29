@@ -5,6 +5,7 @@ require  '././vendor/autoload.php';
 
 use Src\Controllers\BaseController;
 use Src\Services\AuthService;
+use Src\Controllers\IndexController;
 use Src\Entities\User;
 
 class HomeController extends BaseController
@@ -12,12 +13,14 @@ class HomeController extends BaseController
 
     public static function index()
     {
+        
         $Security = new AuthService();
         self::init();
         $alert = false;
 
-        if(!$Security->guard($_SESSION['user']))
-            header('location: ');
+        $user = $Security->autoRefresh($_SESSION['user']);
+        if(!$user instanceof User)
+            return IndexController::logout();
 
         return self::$twig->render(
             'home.html.twig',

@@ -16,22 +16,29 @@ if (!isset($getRequest[1]))
 $config =  json_decode(file_get_contents('config.json'));
 $globalRequest = $getRequest[0] . $getData; 
 
+
+
 switch ($globalRequest){
-    case $config->urls->base.'':
+    case $config->base->url.'/':
         echo index::index();
         break;
 
-    case $config->urls->base.'/login':
+    case $config->base->url.'/login':
         echo index::index();
         break;
 
-    case $config->urls->base.'/home':
+    case $config->base->url.'/home':
         echo home::index();
         break;
     
+    case $config->base->url.'/logout':
+        echo index::logout();
+        break;
+    
+
     default:
         header('HTTP/1.0 404 not found');
+       
         echo  index::error404();
         break;
 }
-

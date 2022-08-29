@@ -1,9 +1,0 @@
-{
-    "baseUrl": {
-        "url": "/myRecode/"
-    }, 
-    "AuthService": {
-        "url": "http://localhost"
-    }
-
-}

@@ -5,26 +5,32 @@
 {% endblock %}
 {% block main %}
 
-
-<main class="  d-flex align-items-center justify-content-center form-signin w-100 m-auto  text-center">
-    <form method="POST" action="">
-        {% if alert %}
-        <div class="alert alert-warning my-3" role="alert">
-            Identifiants invalides !
-        </div>
-        {% endif %}
-        <div class="form-floating my-4 ">
-                <input type="text" class="form-control" name="user__mail" value="{{alert['username']}}" placeholder="lexitjwtSecurity45">
-            <label for="floatingInput">Username</label>
-        </div>
-        <div class="form-floating my-4">
-            <input type="password" class="form-control" value="{{alert['password']}}" name="user__password"  placeholder="Password">
-            <label for="floatingPassword">Password</label>
-        </div>
-
-        <button class=" btn btn-lg btn-primary mx-auto" type="submit">se connecter</button>
-    </form>
-</main>
+<div class="background-x5">
+    <div class="wrapper-myRecode">
+        <h1 class="h1-myRecode">ESPACE CLIENT <span class="tiret-h1">-</span> Gestion de parc </h1>
+        <main class=" d-flex align-items-center justify-content-center form-signin w-100 m-auto  text-center">
+            
+            <form method="POST" action="">
+                {% if alert %}
+                <div class="alert alert-warning my-3" role="alert">
+                    {{alert.message}}
+                </div>
+                {% endif %}
+                <div class="form-floating my-4 ">
+                        <input type="email" class=" input-myRecode-text" name="user__mail" value="{{alert['username']}}" placeholder="Email">
+                </div>
+                <div class="form-floating my-4">
+                    <input type="password" class=" input-myRecode-text" value="{{alert['password']}}" name="user__password"  placeholder="Mot de passe">
+                </div>
+                <button class="btn-myRecode-success  mx-auto" type="submit">Connexion</button>
+            </form>
+        </main>
+        
+    </div>
+    
+</div>
+<div class="recode-logo"></div>
+<div class="ecovadiv"></div>
 {% endblock %}
 {% block script %}
 

@@ -9,7 +9,7 @@ Class BaseController
 
 	protected static function init()
 	{
-       
+		
 		$loader = new \Twig\Loader\FilesystemLoader('./public/templates/');
        	self::$twig = new \Twig\Environment($loader, [
            'debug' => true,

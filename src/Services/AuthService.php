@@ -5,6 +5,7 @@ use GuzzleHttp\Client;
 use Src\Entities\User;
 use GuzzleHttp\Exception\ClientException;
 Use Src\Services\MappingServices;
+use stdClass;
 
 class AuthService {
 
@@ -12,7 +13,8 @@ class AuthService {
     private $Config;
 
     public function __construct(){
-        $this->Config = file_get_contents('globalConfig.json');
+      
+        $this->Config = file_get_contents('config.json');
         $this->Config = json_decode($this->Config);
         $this->Client =  new Client(['base_uri' => $this->Config->AuthService->url ,'curl' => array(CURLOPT_SSL_VERIFYPEER => false)]);
     }
@@ -21,11 +23,12 @@ class AuthService {
         
         try {
             $response = $this->Client->post('/RESTapi/login',  ['json' => ['user__mail' => $username, 'user__password' => $password]]);
+          
             
         } catch (ClientException $exeption) {
             $response = $exeption->getResponse();
+           
         }
-        
         $user = $this->loginHandler($response);
         return $user;
     }
@@ -50,14 +53,18 @@ class AuthService {
             }else{
                $error = [
                     'code' => intval($user->getStatusCode()), 
-                    'message' => $user->getBody()->getContents()
+                    'message' => 'Identifiants invalides'
                ];
                return $error;
             }
         }else{
+            $message = 'un Problème est survenu nous ne parvenons pas a joindre le serveur ' ; 
+            if (intval($response->getStatusCode()) == 401) 
+               $message = 'Identifiant invalides';
+            
             $error = [
                 'code' => intval($response->getStatusCode()),
-                'message' => $response->getBody()->getContents()
+                'message' =>  $message
             ];
             return $error;
         }
@@ -75,15 +82,51 @@ class AuthService {
 
     public function refresh($refresh_token){
         try {
-            $token = $this->Client->get('/api/user/refresh', ['json' => ['refresh_token' => $refresh_token]]);
+            $token = $this->Client->post('/RESTapi/refresh', ['json' => ['refresh_token' => $refresh_token]]);
         } catch (ClientException $exeption) {
+        
             $token = $exeption->getResponse();
         }
         if (intval($token->getStatusCode()) != 200) {
             return false;
         }
         $token = json_decode($token->getBody()->read(1024));
-        return $token->refresh_token;
+       
+        return $token->token;
+    }
+
+    public function autoRefresh(User $user){
+        $mappingService = new MappingServices();
+        if (!$user instanceof User)
+            return false;
+
+        if (empty($user->getRefresh_token()))
+            return false;
+
+
+        $token = [];
+        $obj = new stdClass();
+        $obj->token =  $this->refresh($user->getRefresh_token());
+        array_push($token , $obj);
+        try {
+            $user = $this->Client->get('/RESTapi/user', ['headers' => $this->makeHeaders($token)]);
+            
+        } catch(ClientException $exeption) {
+            var_dump($exeption->getResponse());
+            die();
+            $user = $exeption->getResponse();
+        }
+       
+        if (intval($user->getStatusCode()) == 200){
+            
+            $user = json_decode($user->getBody()->read(1024));
+            $user = $mappingService->map($user[0],User::class);
+            if ($user instanceof User) {
+                return $user;
+            }
+            return false;
+        }
+        return false;
     }
 
     public function guard($user){
