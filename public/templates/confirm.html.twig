@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+    {% block style %}
+    {% endblock %}
+{% block main %}
+    <div class="background-x5">
+        <div class="wrapper-myRecode">
+            <main class=" d-flex align-items-center justify-content-center form-signin w-100 m-auto text-center">
+                {% if alert %}
+                    <div class="alert alert-warning my-3" role="alert">
+                        {{alert}}
+                    </div>
+                    <br>
+                    <a href="login">Retourner à la page de connexion</a>
+                {% endif %}
+            </main>
+        </div>
+    </div>
+{% endblock %}
+    {% block script %}
+    {% endblock %}

@@ -38,6 +38,8 @@ class User{
 
     public $roles;
 
+    public $user__confirm;
+
     
     public function getUser__id(){
         return $this->user__id;
@@ -192,42 +194,38 @@ class User{
         return $this;
     }
 
-    /**
-     * Get the value of user__chrono
-     */ 
-    public function getUser__chrono()
-    {
+  
+    public function getUser__chrono(){
         return $this->user__chrono;
     }
 
-    /**
-     * Set the value of user__chrono
-     *
-     * @return  self
-     */ 
-    public function setUser__chrono($user__chrono)
-    {
+  
+    public function setUser__chrono($user__chrono){
         $this->user__chrono = $user__chrono;
 
         return $this;
     }
 
-    /**
-     * Get the value of roles
-     */ 
-    public function getRoles()
-    {
+  
+    public function getRoles(){
         return $this->roles;
     }
 
-    /**
-     * Set the value of roles
-     *
-     * @return  self
-     */ 
-    public function setRoles($roles)
-    {
+   
+    public function setRoles($roles){
         $this->roles = $roles;
+
+        return $this;
+    }
+
+    
+    public function getUser__confirm(){
+        return $this->user__confirm;
+    }
+
+   
+    public function setUser__confirm($user__confirm){
+        $this->user__confirm = $user__confirm;
 
         return $this;
     }

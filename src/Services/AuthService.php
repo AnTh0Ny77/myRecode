@@ -36,6 +36,17 @@ class AuthService {
         return $user;
     }
 
+    public function confirmUser($confirm__key, $confirm__user){
+        try {
+            $response = $this->Client->get('/RESTapi/confirm/user?confirm__key='.$confirm__key.'&confirm__user='.$confirm__user.'');
+            
+        } catch (ClientException $exeption) {
+            $response = $exeption->getResponse();
+         
+        }
+       return $response;
+    }
+
     public function loginHandler($response){
         $mappingService = new MappingServices();
         if (intval($response->getStatusCode()) == 200 ) {

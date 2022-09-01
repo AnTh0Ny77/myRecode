@@ -2,6 +2,8 @@
 require "vendor/autoload.php";
 use Src\Controllers\IndexController as index;
 use Src\Controllers\HomeController as home;
+use Src\Controllers\ConfirmUserController as confirm;
+
 session_start();
 $request = $_SERVER['REQUEST_URI'];
 $getRequest = explode('?' ,$request, 2);
@@ -33,6 +35,10 @@ switch ($globalRequest){
     
     case $config->base->url.'/logout':
         echo index::logout();
+        break;
+
+    case $config->base->url.'/confirm':
+        echo confirm::index();
         break;
     
 
