@@ -29,6 +29,9 @@ class AuthService {
             $response = $exeption->getResponse();
            
         }
+        if (intval($response->getStatusCode()) != 200) 
+           return $response;
+        
         $user = $this->loginHandler($response);
         return $user;
     }
