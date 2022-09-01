@@ -19,7 +19,7 @@ Class IndexController extends BaseController
           
             
         if (!empty($user ) and !$user instanceof User) 
-            $alert = [ "message" => $user['message'] , 'username' =>  $_POST['user__mail'] , 'password' =>   $_POST['user__password']];
+            $alert = [ "message" => json_decode($user->getBody()->read(1024))[1] , 'username' =>  $_POST['user__mail'] , 'password' =>   $_POST['user__password']];
 
         if (!empty($user) and $user instanceof User) 
             $_SESSION['user'] =  $user;
@@ -27,6 +27,7 @@ Class IndexController extends BaseController
         if (isset($_SESSION['user']) and $_SESSION['user'] instanceof User) 
             return header('location: home');
         
+          
         return self::$twig->render(
             'login.html.twig',[
                 'alert' => $alert
