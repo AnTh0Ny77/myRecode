@@ -109,14 +109,14 @@ class AuthService {
         return $token->token;
     }
 
-    public function autoRefresh(User $user){
+    public function autoRefresh( $user){
         $mappingService = new MappingServices();
+
         if (!$user instanceof User)
             return false;
 
         if (empty($user->getRefresh_token()))
             return false;
-
 
         $token = [];
         $obj = new stdClass();
@@ -126,8 +126,6 @@ class AuthService {
             $user = $this->Client->get('/RESTapi/user', ['headers' => $this->makeHeaders($token)]);
             
         } catch(ClientException $exeption) {
-            var_dump($exeption->getResponse());
-            die();
             $user = $exeption->getResponse();
         }
        
