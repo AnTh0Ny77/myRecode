@@ -4,8 +4,17 @@
 {% block main %}
     {% include "elements/navbar.html.twig" %}
         <main class=" d-flex">
-            <div class="container"> Utilisateur <b>{{user.user__mail}}</b> connecté</div>
-        {{dump(user)}}
+            {% if alert %}
+            <div class="alert alert-recode alert-warning alert-dismissible fade show" role="alert">
+                <div class="div-alert">
+                    <b>
+                        {{alert.message}}
+                    </b>
+                </div>
+                
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endif %}
         </main>
 {% endblock %}
     {% block script %}

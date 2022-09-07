@@ -14,6 +14,7 @@ class HomeController extends BaseController
     public static function index()
     {
         
+        
         $Security = new AuthService();
         self::init();
         $alert = false;
@@ -22,6 +23,11 @@ class HomeController extends BaseController
         if(!$user instanceof User)
             return IndexController::logout();
 
+        if (!empty($_SESSION['alert'])){
+            $alert = $_SESSION['alert'];
+            $_SESSION['alert'] = "";
+        }
+            
         return self::$twig->render(
             'home.html.twig',
             [

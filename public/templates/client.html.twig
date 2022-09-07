@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+    {% block style %}
+    {% endblock %}
+{% block main %}
+    {% include "elements/navbar.html.twig" %}
+        <main class=" d-flex">
+           {% include "forms/client_forms.html.twig" %}
+        </main>
+{% endblock %}
+    {% block script %}
+    {% endblock %}

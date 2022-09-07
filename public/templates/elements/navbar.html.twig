@@ -11,10 +11,18 @@
                         <i class="fas fa-cog"></i>
                     </a>
                     <ul class="dropdown-menu ">
+                        <li><a class="dropdown-item" href="profil">Mon profil</a></li>
+                        <hr>
+                        <h6 class="text-muted">Mes sites</h6>
+                            {% for client in user.clients %}
+                                <li><a class="dropdown-item" href="client/update?cli__id={{client.cli__id}}">{{client.cli__nom}}</a></li>
+                            {% endfor %}
+                        <hr>
                         <li><a class="dropdown-item" href="logout">Se deconnecter</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
+        <div class="container"> Utilisateur <b>{{user.user__mail}}</b> connecté</div>
     </div>
 </nav>

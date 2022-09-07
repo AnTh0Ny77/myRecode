@@ -90,6 +90,12 @@ class AuthService {
         return $headers;
     }
 
+    public function makeHeadersUser( User $user){
+        
+        $headers = ['Authorization' => 'Bearer ' . $user->getToken(), 'Accept' => 'application/json'];
+        return $headers;
+    }
+
     public function logOut(){
 
     }

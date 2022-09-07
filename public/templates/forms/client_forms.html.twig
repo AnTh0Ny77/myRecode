@@ -1,0 +1,30 @@
+<forms method="{{method}}" action="{{action}}">
+    {% if alert %}
+        <div class="alert alert-recode alert-warning alert-dismissible fade show" role="alert">
+            <div class="div-alert">
+                <b>
+                    {{alert.message}}
+                </b>
+            </div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endif %}
+
+    {% if client %}
+        <input type="hidden" name="user__id" value="{{client.cli__id}}">
+    {% endif %}
+
+    <div class="form-floating my-4 ">
+        <input type="text" class="input-myRecode-text" value="{{client.cli__nom}}" name="cli__nom" placeholder="Nom" minlength="2" maxlength="150" required>
+    </div>
+
+    <div class="form-floating my-4 ">
+        <input type="text" class="input-myRecode-text" value="{{client.cli__tel}}" name="cli__tel" placeholder="Telephone" minlength="8" maxlength="20" required>
+    </div>
+
+    <div class="form-floating my-4 ">
+        <input type="text" class="input-myRecode-text" value="{{client.cli__email}}" name="cli__email" placeholder="Email" minlength="8" maxlength="20" required>
+    </div>
+
+    <button class="btn-myRecode-success  mx-auto" type="submit">Valider</button>
+</forms>

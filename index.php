@@ -2,6 +2,7 @@
 require "vendor/autoload.php";
 use Src\Controllers\IndexController as index;
 use Src\Controllers\HomeController as home;
+use Src\Controllers\ClientController as client;
 use Src\Controllers\ConfirmUserController as confirm;
 
 session_start();
@@ -31,6 +32,10 @@ switch ($globalRequest){
 
     case $config->base->url.'/home':
         echo home::index();
+        break;
+
+    case $config->base->url.'/client/update'.$getData:
+        echo client::update();
         break;
     
     case $config->base->url.'/logout':

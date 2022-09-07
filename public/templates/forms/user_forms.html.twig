@@ -1,0 +1,38 @@
+<forms method="{{method}}" action="{{action}}">
+    {% if alert %}
+        <div class="alert alert-recode alert-warning alert-dismissible fade show" role="alert">
+            <div class="div-alert">
+                <b>
+                    {{alert.message}}
+                </b>
+            </div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endif %}
+
+    {% if user %}
+        <input type="hidden" name="user__id" value="{{user.user__id}}">
+    {% endif %}
+
+    <div class="form-floating my-4 ">
+        <input type="text" class="input-myRecode-text" value="{{user.user__nom}}" name="user__nom" placeholder="Nom" minlength="2" maxlength="50" required>
+    </div>
+
+    <div class="form-floating my-4 ">
+        <input type="text" class="input-myRecode-text" value="{{user.user__prenom}}" name="user__prenom" placeholder="Prenom" minlength="2" maxlength="50" required>
+    </div>
+
+    <div class="form-floating my-4 ">
+        <input type="text" class="input-myRecode-text" value="{{user.user__fonction}}" name="user__fonction" placeholder="Fonction" minlength="2" maxlength="50" >
+    </div>
+
+    <div class="form-floating my-4 ">
+        <input type="text" class="input-myRecode-text" value="{{user.user__gsm}}" name="user__gsm" placeholder="Portable" minlength="2" maxlength="50">
+    </div>
+
+    <div class="form-floating my-4 ">
+        <input type="text" class="input-myRecode-text" value="{{user.user__tel}}" name="user__tel" placeholder="Fixe" minlength="2" maxlength="50">
+    </div>
+
+    <button class="btn-myRecode-success  mx-auto" type="submit">Valider</button>
+</forms>
