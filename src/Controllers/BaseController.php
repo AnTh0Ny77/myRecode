@@ -4,7 +4,6 @@ require  '././vendor/autoload.php';
 
 Class BaseController 
 {
-
     protected static $twig;
 
 	protected static function init()
@@ -17,8 +16,5 @@ Class BaseController
        	]);
        	self::$twig->addExtension(new \Twig\Extension\DebugExtension());
 	}
-
-
-   
 }
 

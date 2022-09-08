@@ -91,7 +91,7 @@ class AuthService {
     }
 
     public function makeHeadersUser( User $user){
-        
+      
         $headers = ['Authorization' => 'Bearer ' . $user->getToken(), 'Accept' => 'application/json'];
         return $headers;
     }
@@ -140,6 +140,7 @@ class AuthService {
             $user = json_decode($user->getBody()->read(1024));
             $user = $mappingService->map($user[0],User::class);
             if ($user instanceof User) {
+                $user->setToken($token[0]->token);
                 return $user;
             }
             return false;

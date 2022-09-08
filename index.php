@@ -34,7 +34,7 @@ switch ($globalRequest){
         echo home::index();
         break;
 
-    case $config->base->url.'/client/update'.$getData:
+    case $config->base->url.'/client'.$getData:
         echo client::update();
         break;
     

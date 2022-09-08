@@ -6,7 +6,7 @@
     width: 198px;
     height: 48px;
     background: #1FB447;
-    border-radius: 16px;
+    border-radius: 5px;
     border: none;
     color: #FFFFFF;
     font-family: 'Open Sans Hebrew';
@@ -21,7 +21,7 @@
     width: 198px;
     height: 48px;
     background: #1FB447;
-    border-radius: 16px;
+    border-radius: 5px;
     cursor: pointer;
     color: #FFFFFF;
     border: none;
@@ -49,6 +49,70 @@
     color: rgba(54, 54, 54, 0.6);
     background: #D9D9D9;
 }
+.touch{
+    cursor: pointer;
+}
+
+
+.input-myRecode{
+    border: none;
+    font-family: 'Open Sans';
+    font-style: normal;
+    height: 53px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    
+    
+    color: rgba(54, 54, 54, 0.6);
+    background: #D9D9D9;
+    border-radius: 4px;
+}
+
+.input-myRecode-disabled{
+    border: 1px;
+    border-style: solid;
+    border-color: #000000;
+    font-family: 'Open Sans';
+    font-style: normal;
+    height: 53px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    color: rgba(70, 69, 69, 0.6);
+    background: #D9D9D9;
+    border-radius: 4px;
+}
+
+
+.pac-container {
+    background-color: #D9D9D9;
+   
+    border-radius: 2px;
+    border-top: 1px solid #d9d9d9;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden
+}
+
+.pac-container:after {
+    background-image: none !important;
+    height: 0px;
+}
+
+.input-myRecode:focus{
+   
+    outline: none !important;
+    border:1px solid #1FB447;
+}
+
+.input-myRecode-disabled:focus{
+    outline: none !important;
+    cursor: not-allowed;
+}
 
 .input-myRecode-text:focus{
     outline: none;
@@ -61,12 +125,12 @@
     text-align: left;
 }
 
-input[type="email"]{
+/* input[type="email"]{
     text-align: center;
 }
 input[type="text"] {
     text-align: right;
-}
+} */
 
 .wrapper-myRecode{
     margin-top: 14%;
@@ -99,12 +163,13 @@ input[type="text"] {
     background: #D9D9D9;
     border: #D9D9D9;
     position: fixed;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3000;
     min-height: 340px;
-    min-width: 200px;
+    min-width: 350px ;
+    width: 700px;
 }
 .div-alert{
     padding-top: 12%;

@@ -1,4 +1,4 @@
-<forms method="{{method}}" action="{{action}}">
+<form method="POST" action="client">
     {% if alert %}
         <div class="alert alert-recode alert-warning alert-dismissible fade show" role="alert">
             <div class="div-alert">
@@ -11,20 +11,49 @@
     {% endif %}
 
     {% if client %}
-        <input type="hidden" name="user__id" value="{{client.cli__id}}">
+        <input type="hidden" name="cli__id" value="{{client.cli__id}}">
     {% endif %}
 
-    <div class="form-floating my-4 ">
-        <input type="text" class="input-myRecode-text" value="{{client.cli__nom}}" name="cli__nom" placeholder="Nom" minlength="2" maxlength="150" required>
+    <div class=" my-4 d-flex justify-content-center">
+        <input type="text" class="input-myRecode col-7 touch" value="{{client.cli__nom}}" name="cli__nom" placeholder="Nom*" minlength="2" maxlength="65"  required>
     </div>
 
-    <div class="form-floating my-4 ">
-        <input type="text" class="input-myRecode-text" value="{{client.cli__tel}}" name="cli__tel" placeholder="Telephone" minlength="8" maxlength="20" required>
+    <div class=" my-4 d-flex justify-content-center">
+        <input type="text" class="input-myRecode col-7 touch" value="{{client.cli__tel}}" name="cli__tel" placeholder="Telephone*" minlength="8" maxlength="20" required>
     </div>
 
-    <div class="form-floating my-4 ">
-        <input type="text" class="input-myRecode-text" value="{{client.cli__email}}" name="cli__email" placeholder="Email" minlength="8" maxlength="20" required>
+    <div class=" my-4 d-flex justify-content-center">
+        <input type="text" class="input-myRecode col-7 touch" value="{{client.cli__email}}" name="cli__email" placeholder="Email*" minlength="8" maxlength="75" required>
+    </div>
+    <hr class="col-7 mx-auto">
+    <div class=" my-5 d-flex justify-content-center">
+        <input type="text" class="input-myRecode col-7 touch" id="pac-input" placeholder="Indiquez votre nouvelle adresse">
     </div>
 
-    <button class="btn-myRecode-success  mx-auto" type="submit">Valider</button>
-</forms>
+    <div class=" my-4 d-flex justify-content-center">
+        <input type="text" class="input-myRecode-disabled col-7 " value="{{client.cli__adr1}}" name="cli__adr1" id="cli__adr1" placeholder="Adresse 1 *" minlength="5" maxlength="75" readonly="readonly"  required>
+    </div>
+
+    <div class=" my-4 d-flex justify-content-center">
+        <input type="text" class="input-myRecode col-7 touch" value="{{client.cli__adr2}}" name="cli__adr2" id="cli__adr2" placeholder="Complément" minlength="4"  maxlength="75" >
+    </div>
+
+    <div class="d-flex flex-wrap col-7 mx-auto justify-content-between ">
+       
+            <input type="text" class="input-myRecode-disabled col-4   my-4 " value="{{client.cli__cp}}" name="cli__cp" id="cli__cp" placeholder="Code Postal*" minlength="3" maxlength="10" readonly="readonly"  required>
+       
+    
+       
+            <input type="text" class="input-myRecode-disabled my-4 " value="{{client.cli__ville}}" name="cli__ville" id="cli__ville" placeholder="Ville*" minlength="2" maxlength="30" readonly="readonly"  required>
+       
+    
+        
+            <input type="text" class="input-myRecode-disabled  my-4" value="{{client.cli__pays}}" name="cli__pays" id="cli__pays" placeholder="Pays*" minlength="2" maxlength="30" readonly="readonly"  required>
+       
+    </div>
+    
+    <div class="mx-auto my-4 col-7">
+        <button class="btn-myRecode-success  mx-auto" type="submit">Valider</button>
+    </div>
+    
+</form>

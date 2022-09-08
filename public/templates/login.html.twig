@@ -1,27 +1,23 @@
 {% extends 'base.html.twig' %}
 {% block style %}
-
-
 {% endblock %}
 {% block main %}
-
+{% if alert %}
+        <div class="alert alert-recode alert-warning alert-dismissible fade show" role="alert">
+            <div class="div-alert">
+                <b>
+                    {{alert.message}}
+                </b>
+            </div>   
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+{% endif %}
 <div class="background-x5">
     <div class="wrapper-myRecode">
         <h1 class="h1-myRecode">ESPACE CLIENT <span class="tiret-h1">-</span> Gestion de parc </h1>
         <main class=" d-flex align-items-center justify-content-center form-signin w-100 m-auto  text-center">
             
             <form method="POST" action="">
-                {% if alert %}
-                <div class="alert alert-recode alert-warning alert-dismissible fade show" role="alert">
-                    <div class="div-alert">
-                        <b>
-                            {{alert.message}}
-                        </b>
-                    </div>
-                    
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div>
-                {% endif %}
                 <div class="form-floating my-4 ">
                         <input type="email" class=" input-myRecode-text" name="user__mail" value="{{alert['username']}}" placeholder="Email">
                 </div>
@@ -31,9 +27,7 @@
                 <button class="btn-myRecode-success  mx-auto" type="submit">Connexion</button>
             </form>
         </main>
-        
     </div>
-    
 </div>
 <div class="recode-logo"></div>
 <div class="ecovadiv"></div>
