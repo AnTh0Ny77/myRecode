@@ -4,6 +4,7 @@ use Src\Controllers\IndexController as index;
 use Src\Controllers\HomeController as home;
 use Src\Controllers\ClientController as client;
 use Src\Controllers\ConfirmUserController as confirm;
+use Src\Controllers\ResetPasswordController as reset;
 
 session_start();
 $request = $_SERVER['REQUEST_URI'];
@@ -18,8 +19,6 @@ if (!isset($getRequest[1]))
 
 $config =  json_decode(file_get_contents('config.json'));
 $globalRequest = $getRequest[0] . $getData; 
-
-
 
 switch ($globalRequest){
     case $config->base->url.'/':
@@ -45,6 +44,14 @@ switch ($globalRequest){
     case $config->base->url.'/confirm':
         echo confirm::index();
         break;
+
+    case $config->base->url.'/forgot':
+        echo reset::index();
+        break;
+
+    case $config->base->url.'/reset':
+        echo reset::reset();
+        break;
     
 
     default:
@@ -53,3 +60,5 @@ switch ($globalRequest){
         echo  index::error404();
         break;
 }
+
+

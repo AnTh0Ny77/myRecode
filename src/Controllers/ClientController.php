@@ -101,6 +101,7 @@ class ClientController extends BaseController
 
 
     public static function putClient(GuzzleClient $gz , AuthService $security  , MappingServices $Map , User $user  ){
+        
         try {
             $response = $gz->put('/RESTapi/client',  [ 'headers' => $security->makeHeadersUser($user) ,
             'json' =>  $_POST ]);
