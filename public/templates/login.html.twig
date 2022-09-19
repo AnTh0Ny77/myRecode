@@ -1,34 +1,35 @@
 {% extends 'base.html.twig' %}
 {% block style %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 {% endblock %}
 {% block main %}
-{% if alert %}
-        <div class="alert alert-recode alert-warning alert-dismissible fade show" role="alert">
-            <div class="div-alert">
-                <b>
-                    {{alert.message}}
-                </b>
-            </div>   
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-{% endif %}
+
 <div class="background-x5">
     <div class="wrapper-myRecode">
-        <h1 class="h1-myRecode">ESPACE CLIENT <span class="tiret-h1">-</span> Gestion de parc </h1>
+        <h1 class="h1-myRecode">ESPACE CLIENT <span class="tiret-h1"><br></span> Gestion de parc </h1>
+       
         <main class=" d-flex align-items-center justify-content-center form-signin w-100 m-auto  text-center">
-            
             <form method="POST" action="">
-                <div class="form-floating my-4 ">
-                        <input type="email" class=" input-myRecode-text" name="user__mail" value="{{alert['username']}}" placeholder="Email">
+                {% if alert %}
+                <div class="alert alert-danger-recode" role="alert">
+                    <div class="">
+                        <b>
+                            {{alert.message}}
+                        </b>
+                    </div>   
+                </div>
+                {% endif %}
+                <div class="form-floating my-2 ">
+                        <input type="email" class="input-text-myRecode" name="user__mail" value="{{alert['username']}}" placeholder="Email">
                 </div>
                 <div class="form-floating my-4">
-                    <input type="password" class=" input-myRecode-text" value="{{alert['password']}}" name="user__password"  placeholder="Mot de passe">
-                    
+                    <input type="password" class="input-text-myRecode" value="{{alert['password']}}" name="user__password" id="password"  placeholder="Mot de passe">
+                    <i class="fa-solid fa-eye" id="eye"></i>
                 </div>
                <div class="mb-3">
                      <a href="forgot" class="side-link "> Mot de pass oublié ? </a>
                </div>
-                <button class="btn-myRecode-success  mx-auto" type="submit">Connexion</button>
+                <button class="btn-myRecode-success my-2  mx-auto" type="submit">Connexion</button>
             </form>
         </main>
     </div>
@@ -37,7 +38,15 @@
 <div class="ecovadiv"></div>
 {% endblock %}
 {% block script %}
-<!-- JavaScript Bundle with Popper -->
+<script type="text/javascript">
+    const passwordField = document.querySelector("#password");
+    const eyeIcon= document.querySelector("#eye");
+    eye.addEventListener("click", function(){
+        this.classList.toggle("fa-eye-slash");
+        const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+        passwordField.setAttribute("type", type);
+      })
+</script>
 
 
 {% endblock %}

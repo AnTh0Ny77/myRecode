@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/earlyaccess/opensanshebrew.css');
+@import url('https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css');
+
+
+
+.h1-myRecode{
+    font-family: 'Open Sans Hebrew';
+    margin-bottom: 3%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.btn-myRecode-success{
+    width: 193.07px;
+    height: 46.63px;
+    border: none;
+    background: #1FB447;
+    border-radius: 16px;
+    font-family: 'Open Sans Hebrew';
+    font-family: 'Open Sans Hebrew';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.btn-recode-classic{
+    width: 193.07px;
+    height: 46.63px;
+    background: #444444;
+    border-radius: 16px;
+    border-radius: 16px;
+    font-family: 'Open Sans Hebrew';
+    font-family: 'Open Sans Hebrew';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+.background-x5{
+    background: url('../images/fond-x5.png') no-repeat center center fixed;
+    border: 1px solid #000000;
+    backdrop-filter: blur(4px);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+
+}
+
+.input-text-myRecode{
+    border: none;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    width: 324px;
+    height: 52px;
+    padding-left: 17px;
+    color: #7C7C7F;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+
+.input-text-myRecode:focus{
+   
+    outline: none !important;
+    border: 4px solid rgba(68, 68, 68, 0.8);
+    border-radius: 10px;
+}
+
+.input-text-myRecode:focus{
+    outline: none !important;
+    cursor: not-allowed;
+}
+
+.input-text-myRecode:focus{
+    outline: none;
+}
+
+.input-text-myRecode::placeholder {
+    margin-left: 20px;
+    text-align: left;
+}
+
+
+.alert-danger-recode{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: auto;
+    margin-bottom: 20px;
+    max-width: 333px;
+    z-index: 320;
+    padding: 24px;
+    gap: 8px;
+    text-align: center;
+    background: rgba(251, 0, 0, 0.25);
+    border: 2px solid #E2B6B6;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+
+.alert-success-recode{
+
+    background: rgba(31, 180, 71, 0.5);
+    border-radius: 10px;
+}
+
+.side-link{
+    font-family: 'Open Sans Hebrew';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+}
+
+
+.side-link:hover{
+    font-family: 'Open Sans Hebrew';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    text-decoration-line: underline;
+    color: rgba(68, 68, 68, 0.8);
+}
+
+.picto-danger{
+    color: #A92525;
+}
+
+
+.recode-logo{
+    position: absolute;
+    width: 354px;
+    height: 139px;
+    left: 29px;
+    top: 22px;
+    background: url("../images/logo-recode.png") no-repeat;
+}
+
+
+.wrapper-myRecode{
+    margin-top: 18%;
+}
+
+.ecovadiv{
+    position: absolute;
+    width: 229px;
+    height: 129px;
+    right: 0px;
+    bottom: 36px;
+    background: url("../images/logoecovadis.png");
+}
+
+.fa-eye{
+    position: absolute;
+    top: 28%;
+    right: 4%;
+    cursor: pointer;
+    color: #7C7C7C;;
+  }
+
+
+@media (max-width:706px){
+
+    .btn-myRecode-success{
+        width: 119.17px;
+        height: 45px;
+        border: none;
+        color: #FFFFFF;
+        background: #1FB447;
+        border-radius: 16px;
+        font-family: 'Open Sans Hebrew';
+        font-family: 'Open Sans Hebrew';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .btn-recode-classic{
+        width: 119.17px;
+        height: 45px;
+        background: #444444;
+        border-radius: 16px;
+        border-radius: 16px;
+        font-family: 'Open Sans Hebrew';
+        font-family: 'Open Sans Hebrew';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .input-text-myRecode{
+        border: none;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #7C7C7F;
+        width: 249px;
+        height: 52px;
+        padding-left: 17px;
+        color: #7C7C7F;
+        background: #FFFFFF;
+        border-radius: 10px;
+    }
+
+    
+    .alert-danger-recode{
+        min-width: 140%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: -20.2%;
+        margin-bottom: 20px;
+        max-width: 249px;
+        z-index: 320;
+        padding: 24px;
+        gap: 8px;
+        text-align: center;
+        background: rgba(251, 0, 0, 0.25);
+        border: 2px solid #E2B6B6;
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        color: #FFFFFF;
+    }
+
+    .recode-logo{
+        width: 186px;
+        height: 79px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background: url("../images/logo-recode-mini.png") no-repeat;
+    }
+
+    .ecovadiv{
+        position: absolute;
+        width: 185px;
+        height: 107px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        bottom: 36px;
+        background: url("../images/logo-ecovadis-mini.png");
+    }
+
+    .background-x5{
+        background: url('../images/fond-x5-mini.png') no-repeat center center fixed;
+        border: 1px solid #000000;
+        backdrop-filter: blur(4px);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        min-width: 100%;
+        min-height: 100%;
+    
+    }
+
+    .wrapper-myRecode{
+        margin-top: 187px;
+    }
+
+    .side-link{
+        font-family: 'Open Sans Hebrew';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        text-decoration-line: underline;
+        color: #FFFFFF;
+    }
+
+    .side-link:hover{
+        font-family: 'Open Sans Hebrew';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        text-decoration-line: underline;
+        color: rgba(68, 68, 68, 0.8);
+    }
+
+    .h1-myRecode{
+        font-family: 'Open Sans Hebrew';
+        margin-bottom: 3%;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        color: #FFFFFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    
+    
+}
