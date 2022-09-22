@@ -49,7 +49,7 @@ switch ($globalRequest){
         echo reset::index();
         break;
 
-    case $config->base->url.'/reset':
+    case $config->base->url.'/reset'.$getData:
         echo reset::reset();
         break;
     

@@ -1,9 +1,16 @@
 <form method="POST" action="forgot">
-
-    <div class=" my-4 d-flex flex-column justify-content-center align-items-center">
+    <div class="my-2 d-flex flex-column justify-content-center align-items-center">
         <input type="hidden" value="{{key}}" name="confirm__key">
-        <input type="password" class="input-myRecode col-7 my-4 "  name="user__password" placeholder="Nouveau mot de passe" required>
-        <input type="password" class="input-myRecode col-7 my-4 "  name="confirm__pass" placeholder="Confirmez votre nouveau mot de passe*" required>
+        <div class="my-2 form-floating">
+            <input type="password" class="input-text-myRecode-large password" id="user__password"   name="user__password" placeholder="Nouveau mot de passe" required>
+            <i class="fa-solid fa-eye"  id="eye1"></i>
+        </div>
+       
+        <div class="my-2 form-floating">
+            <input type="password" class="input-text-myRecode-large password" id="confirm__pass"  name="confirm__pass" placeholder="Confirmez le mot de passe" required>
+            <i class="fa-solid fa-eye" id="eye2"></i>
+        </div>
+        
         <button class="btn-myRecode-success  my-4" type="submit">Valider</button>
     </div>
         

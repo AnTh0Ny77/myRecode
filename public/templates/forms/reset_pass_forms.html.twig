@@ -1,8 +1,24 @@
-<form method="GET" action="forgot">
-
+<form method="GET" action="forgot" class="wrapper-password">
+    {% if alert %}
+                <div class=" alert-danger-recode alert-success-recode" role="alert">
+                    <div class="">
+                        <b>
+                            {{alert.message}}
+                        </b>
+                    </div>   
+                </div>
+    {% endif %}
+    
     <div class=" my-4 d-flex flex-column justify-content-center align-items-center">
-        <input type="email" class="input-myRecode col-7 "  name="user__mail" placeholder="Renseignez votre email*" required>
-        <button class="btn-myRecode-success  my-4" type="submit">Valider</button>
+        <div class="myRecodeText my-2 wrapper-text-large">
+            Entrez votre adresse e-mail et nous vous enverrons un lien pour récupérer votre compte.
+        </div>
+        <input type="email" class="input-text-myRecode-large "  name="user__mail" placeholder="Email" required>
+        <div class="d-flex mx-auto justify-content-between my-4 wrapper-button-large">
+            <button class="btn-myRecode-success" type="submit">Valider</button>
+            <button type="button" class="btn-recode-classic" id="retour">Retour</button>
+        </div>
+        
     </div>
         
 </form>

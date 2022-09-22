@@ -27,7 +27,7 @@ class ResetPasswordController extends BaseController
             $link = self::getLink($GuzzleClient ,  $_GET['user__mail']);
             
             if ($link == false) {
-                $alert = [ 'message' => 'un lien de résiliation à été envoyé'];
+                $alert = [ 'message' => 'un lien pour regénérer votre mot de passe à été envoyé'];
             } else {
                 $alert = ['message' => $link[1]];
             } 
@@ -79,7 +79,7 @@ class ResetPasswordController extends BaseController
     public  static function getLink(GuzzleClient $GuzzleClient , string $email){
         
         try {
-            $response = $GuzzleClient->get('/RESTapi/forgot' , [
+            $response = $GuzzleClient->get('/RESTapi/forgot/password' , [
                 'query' => [ 'user__mail' =>  $email]
             ]);
             
@@ -87,7 +87,7 @@ class ResetPasswordController extends BaseController
             $response = $exeption->getResponse();
         }
         $message = json_decode($response->getBody()->read(1024));
-      
+       
         if (intval($response->getStatusCode()) != 200) 
             return false;
 

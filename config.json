@@ -3,7 +3,7 @@
         "url": "/myRecode"
     }, 
     "AuthService": {
-        "url": "http://localhost:8080"
+        "url": "http://localhost"
     }
 
 }
