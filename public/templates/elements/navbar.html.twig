@@ -1,28 +1,68 @@
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse nav navbar-nav flex-row justify-content-start flex-nowrap mx-4" id="navbarNavDropdown">
-            <ul class="navbar-nav ">
-                <li class="nav-item dropdown-center">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-cog"></i>
-                    </a>
-                    <ul class="dropdown-menu ">
-                        <li><a class="dropdown-item" href="home">Mon profil</a></li>
-                        <hr>
-                        <h6 class="text-muted">Mes sites</h6>
-                            {% for client in user.clients %}
-                                <li><a class="dropdown-item" href="client?cli__id={{client.cli__id}}">{{client.cli__nom}}</a></li>
-                            {% endfor %}
-                        <hr>
-                        <li><a class="dropdown-item" href="logout">Se deconnecter</a></li>
-                    </ul>
-                </li>
-            </ul>
+<nav class="navbar-recode">
+
+    <div class="logo-navbar"></div>
+
+    <div class="menu-navbar d-flex">
+
+        <div class="item-menu">
+            <i class="fal fa-tools"></i>
+            Ticket 
         </div>
-        <div class="container"> Utilisateur <b>{{user.user__mail}}</b> connecté</div>
+
+        <div class="item-menu">
+            <i class="far fa-list-ul"></i>
+            Parc
+        </div>
+
+        <div class="item-menu">
+            <i class="far fa-shopping-cart"></i>
+            Catalogue
+        </div>
+
+        <div class="item-menu">
+            <i class="far fa-briefcase"></i>
+            Administration
+        </div>
+
+
     </div>
+
+
 </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{# <div class="collapse navbar-collapse nav navbar-nav flex-row justify-content-start flex-nowrap mx-4" id="navbarNavDropdown"> #}
+    {# <ul class="navbar-nav ">
+        <li class="nav-item dropdown-center">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-cog"></i>
+            </a>
+            <ul class="dropdown-menu ">
+                <li><a class="dropdown-item" href="home">Mon profil</a></li>
+                <hr>
+                <h6 class="text-muted">Mes sites</h6>
+                    {% for client in user.clients %}
+                        <li><a class="dropdown-item" href="client?cli__id={{client.cli__id}}">{{client.cli__nom}}</a></li>
+                    {% endfor %}
+                <hr>
+                <li><a class="dropdown-item" href="logout">Se deconnecter</a></li>
+            </ul>
+        </li>
+    </ul> #}
+{# </div> #}
