@@ -4,6 +4,7 @@
 .navbar-recode{
     overflow: hidden;
     position: fixed;
+    z-index: 3;
     height: 121px;
     top: 0;
     width: 100%;
@@ -73,6 +74,12 @@
 .menu-smartphone{
     display: hidden;
     width: 0px;
+}
+
+.link-navbar-myrecode-smart{
+    display: none;
+    width: 0px;
+    height: 0px;
 }
 
 
@@ -193,6 +200,16 @@
         line-height: 22px;
         color: #FFFFFF;
    }
+
+   .link-navbar-myrecode-smart{
+    text-decoration: none;
+    color: #FFFFFF;
+    }
+
+    .link-navbar-myrecode-smart:hover{
+    text-decoration: none;
+    color: #1FB447
+    }
     
     .last-navbar{
         display: none;
