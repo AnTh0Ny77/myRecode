@@ -2,10 +2,11 @@
     {% block style %}
     <link rel="stylesheet" href="public/css/navbar.css">
     <link rel="stylesheet" href="public/css/sidebar.css">
+    <link rel="stylesheet" href="public/css/offres.css">
     {% endblock %}
 {% block main %}
     {% include "elements/navbar.html.twig" %}
-    {% include "elements/sidebar.html.twig" %}
+   
     {% if alert %}
             <div class="alert alert-recode alert-warning alert-dismissible fade show" role="alert">
                 <div class="div-alert">
@@ -16,8 +17,33 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
     {% endif %}
-        <main class=" d-flex">
-            
+        <main class="">
+          
+            <div class=" wrapper-home">
+                <div class="background-x5-clair">
+                    <div class="content-home">
+                       <h1 class="h1-myRecode tittle-home h1-left">Espace client</h1>
+                       <div class="wrapper-body-home">
+                            <div class="sous-titre-myRecode sous-titre-left">
+                                <i class="fas fa-user fa-lg"></i>   <span class="mx-4">Nom Prenom user</span>
+                            </div>
+                            <div class="d-flex flex-row wrapper-stat-logo">
+                                <div class="tickets-cours">
+                                   <div class="tickets-display"><span class="span-success mx-2">3</span> tickets en cours</div>
+                                   <div class="tickets-display"><span class="span-standard mx-2">0</span> tickets cloturés </div>
+                                </div>
+                                <div class="logo-user">
+                                    <img class="image-logo-home" src="public/images/standard.png" alt="commercial">
+                                </div>
+                            </div>
+                       </div>
+                     
+                    
+                       {% include "elements/offres.html.twig" %} 
+                    </div>
+                    {% include "elements/sidebar.html.twig" %} 
+                </div>
+            </div>
         </main>
 {% endblock %}
     {% block script %}

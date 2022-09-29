@@ -15,6 +15,13 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
 }
 
+.h1-left{
+    text-align: left;
+    
+}
+
+
+
 .myRecodeText{
     font-family: 'Open Sans Hebrew';
     font-style: normal;
@@ -70,6 +77,9 @@
 .overflow{
     overflow: auto;
 }
+.wrapper-home{
+   
+}
 
 .background-x5{
     background: url('../images/fond-x5.png') no-repeat center center ;
@@ -80,6 +90,21 @@
     -o-background-size: cover;
     position: absolute; 
     top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.background-x5-clair{
+    background: url('../images/fond-x5.png') no-repeat center center ;
+    border: 1px solid #000000;
+    -webkit-backdrop-filter: blur(2px);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: absolute; 
+    backdrop-filter: blur(2px);
+    top: 0px; 
     left: 0; 
     min-width: 100%;
     min-height: 100%;
@@ -211,6 +236,26 @@
     color: #A92525;
 }
 
+.sous-titre-myRecode{
+    font-family: 'Open Sans Hebrew';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sous-titre-left{
+    text-align: left;
+    margin-top: 15px;
+    margin-left: 35px;
+}
+
+.wrapper-body-home{
+    margin-left: 65px;
+}
+
 
 .recode-logo{
     position: absolute;
@@ -241,6 +286,72 @@
     right: 4%;
     cursor: pointer;
     color: #7C7C7C;;
+  }
+
+  .content-home{
+      display: flex;
+      flex-direction: column;
+      margin-top: 120px;
+      position: absolute;
+      right: 0;
+      padding-left: 380px;
+      width: 100%;
+  }
+  .tittle-home{
+      margin-top: 15px;
+      margin-left: 35px;
+  }
+
+  .wrapper-stat-logo{
+      margin-top: 15px;
+      color: white;
+      width: 100%;
+      justify-content: space-between;
+  }
+
+  .tickets-cours{
+      margin-top: 35px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: start;
+      width: 50%;
+  }
+
+  .tickets-display{
+    margin-left: 15%;
+    font-family: 'Open Sans Hebrew';
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+  }
+
+  .span-success{
+    background: #1FB447;
+    padding: 4px 10px 4px;
+    border-radius: 10px;
+  }
+
+  .span-standard{
+    background: #444444;
+    padding: 4px 10px 4px;
+    border-radius: 10px;
+  }
+
+  .image-logo-home{
+    border-radius: 10px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    width: auto;
+    height:160px;
+  }
+
+  .logo-user{
+      width: 50%;
+      display: flex;
+      justify-content: flex-start;
   }
 
 
@@ -358,15 +469,16 @@
     }
 
     .ecovadiv{
-        position: absolute;
+        position: relative;
         width: 185px;
         height: 107px;
+        margin-top: 80px;
         margin-left: auto;
         margin-right: auto;
         left: 0;
         right: 0;
         text-align: center;
-        bottom: 36px;
+        bottom: 16px;
         background: url("../images/logo-ecovadis-mini.png");
     }
 
@@ -384,6 +496,21 @@
         min-width: 100%;
         min-height: 100%;
     
+    }
+
+    .background-x5-clair{
+        background: url('../images/fond-clair-mini.png') no-repeat center center ;
+        border: 1px solid #000000;
+        backdrop-filter: blur(4px);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        position: absolute; 
+        backdrop-filter: blur(4px);
+        top: 0px; 
+        left: 0; 
+        min-width: 100%;
+        min-height: 100%;
     }
 
     .wrapper-myRecode{
