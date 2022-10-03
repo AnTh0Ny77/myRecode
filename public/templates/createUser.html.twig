@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+    {% block style %}
+    <link rel="stylesheet" href="public/css/navbar.css">
+    <link rel="stylesheet" href="public/css/forms.css">
+    {% endblock %}
+{% block main %}
+    {% include "elements/navbar.html.twig" %}
+    <div class="background-x5">
+        <div class="wrapper-myRecode">
+            
+            <main class=" d-flex flex-column align-items-center justify-content-around text-center">
+                <h1 class="h1-myRecode">Creation modification utilisateur</h1>
+                {% include "forms/userForms.html.twig" %}
+            </main>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+{% endblock %}

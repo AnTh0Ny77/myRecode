@@ -6,7 +6,6 @@
     {% endblock %}
 {% block main %}
     {% include "elements/navbar.html.twig" %}
-   
     {% if alert %}
             <div class="alert alert-recode alert-warning alert-dismissible fade show" role="alert">
                 <div class="div-alert">
@@ -18,10 +17,9 @@
             </div>
     {% endif %}
         <main class="">
-          
-            <div class=" wrapper-home">
-                <div class="background-x5-clair">
-                    <div class="content-home">
+            <div class=" wrapper-home ">
+                <div class="">
+                    <div class="content-home background-x5-clair">
                        <h1 class="h1-myRecode tittle-home h1-left">Espace client</h1>
                        <div class="wrapper-body-home">
                             <div class="sous-titre-myRecode sous-titre-left">
@@ -37,13 +35,11 @@
                                 </div>
                             </div>
                        </div>
-                     
-                    
                        {% include "elements/offres.html.twig" %} 
-                    </div>
-                    {% include "elements/sidebar.html.twig" %} 
+                    </div> 
                 </div>
             </div>
+            {% include "elements/sidebar.html.twig" %} 
         </main>
 {% endblock %}
     {% block script %}

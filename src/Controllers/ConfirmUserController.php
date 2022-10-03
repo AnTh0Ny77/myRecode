@@ -39,4 +39,6 @@ class ConfirmUserController extends BaseController
             ]
         );
     }
+
+    
 }

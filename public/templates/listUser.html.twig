@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+    {% block style %}
+    <link rel="stylesheet" href="public/css/navbar.css">
+    <link rel="stylesheet" href="public/css/forms.css">
+    <link rel="stylesheet" href="public/css/list.css">
+    {% endblock %}
+{% block main %}
+    {% include "elements/navbar.html.twig" %}
+    <div class="background-x5">
+        <div class="wrapper-myRecode">
+            
+            <main class=" d-flex flex-column align-items-center justify-content-around text-center">
+                <h1 class="h1-myRecode col-7 mx-auto">Utilisateurs</h1>
+                <button class="btn-myRecode-success " type="submit">Ajout</button>
+                <div class="d-flex justify-content-center align-items-center">
+
+
+                    <div class="d-flex card-myrecode">
+                        <div class="col-2 d-flex flex-column align-items-center justify-content-cente logo-div">
+                            <i class="far fa-user fa-2x logo-div"></i>
+                        </div>
+                        <div class="col-7 d-flex flex-column align-items-start justify-content-start py-2 body-card">
+                            <div class="text-card">
+                                Louis Romains - Droit Utilisateurs
+                            </div>
+                            <div class="text-card-mini">
+                                Test@gmail.com
+                            </div>
+                            <div class="text-card-mini">
+                                0663456743
+                            </div>
+                            <div class="text-card">
+                               Site machin chose
+                            </div>
+
+                        </div>
+                        <div class="col-3 d-flex align-items-center justify-content-center wrapper-button-list">
+                            <button class="btn-list-myrecode-success mx-2"><i class="fas fa-pencil-alt"></i></button>
+                            <button class="btn-list-myrecode mx-2"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+{% endblock %}

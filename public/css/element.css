@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/earlyaccess/opensanshebrew.css');
 @import url('https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css');
 
-
-
 .h1-myRecode{
     font-family: 'Open Sans Hebrew';
     margin-bottom: 3%;
@@ -19,8 +17,6 @@
     text-align: left;
     
 }
-
-
 
 .myRecodeText{
     font-family: 'Open Sans Hebrew';
@@ -268,7 +264,6 @@
 
 .wrapper-myRecode {
     margin-top: 15%;
-    overflow-y: scroll;
 }
 
 .ecovadiv{
@@ -366,8 +361,6 @@
         color: #FFFFFF;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
     }
-  
-
     .btn-myRecode-success{
         width: 119.17px;
         height: 45px;
@@ -428,7 +421,6 @@
         border-radius: 10px;
     }
 
-    
     .alert-danger-recode{
         min-width: 140%;
         display: flex;
@@ -514,7 +506,7 @@
     }
 
     .wrapper-myRecode{
-        margin-top: 187px;
+        margin-top: 100px;
     }
 
     .side-link{
@@ -571,7 +563,6 @@
     .wrapper-text-large{
         max-width: 300px;
         margin-bottom: 25px !important;
-       
     }
     
     

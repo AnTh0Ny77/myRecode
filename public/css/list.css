@@ -1,0 +1,114 @@
+.card-myrecode{
+    width: 853px;
+    height: 126px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.text-card{
+    font-family: 'Open Sans Hebrew';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #444444;
+}
+
+.text-card-mini{
+    font-family: 'Open Sans Hebrew';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 17px;
+    line-height: 27px;
+    color: #444444;
+}
+
+.btn-list-myrecode{
+    width: 40px;
+    height: 40px;
+    background: #A92525;
+    border: none;
+    color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.btn-list-myrecode-success{
+    background: #1FB447;
+    width: 40px;
+    height: 40px;
+    border: none;
+    color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.logo-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:900px){
+    .card-myrecode{
+        width: 347px;
+        height: 145px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        margin-top: 10px;
+        display: flex!important;
+        flex-direction: column !important;
+
+    }
+    .text-card{
+        font-family: 'Open Sans Hebrew';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: #444444;
+    }
+    
+    .text-card-mini{
+        font-family: 'Open Sans Hebrew';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 22px;
+        color: #444444;
+    }
+
+    .btn-list-myrecode{
+        width: 30px;
+        height: 30px;
+        background: #A92525;
+        border: none;
+        color: #FFFFFF;
+        border-radius: 50%;
+    }
+    
+    .btn-list-myrecode-success{
+        background: #1FB447;
+        width: 30px;
+        height: 30px;
+        border: none;
+        color: #FFFFFF;
+        border-radius: 50%;
+    }
+
+    .wrapper-button-list{
+        display: flex!important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    .logo-div{
+        display: none;
+        width: 0px;
+    }
+
+    .body-card{
+        width: 95%!important;
+        padding-left: 5px;
+    }
+}

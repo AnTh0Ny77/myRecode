@@ -5,6 +5,7 @@ use Src\Controllers\HomeController as home;
 use Src\Controllers\ClientController as client;
 use Src\Controllers\ConfirmUserController as confirm;
 use Src\Controllers\ResetPasswordController as reset;
+use Src\Controllers\UserController as user;
 
 session_start();
 $request = $_SERVER['REQUEST_URI'];
@@ -52,7 +53,14 @@ switch ($globalRequest){
     case $config->base->url.'/reset'.$getData:
         echo reset::reset();
         break;
-    
+
+    case $config->base->url.'/user'.$getData:
+        echo user::create();
+        break;
+
+    case $config->base->url.'/list-user'.$getData:
+        echo user::list();
+        break;    
 
     default:
         header('HTTP/1.0 404 not found');
