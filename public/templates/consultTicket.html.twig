@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+    {% block style %}
+    <link rel="stylesheet" href="public/css/navbar.css">
+    <link rel="stylesheet" href="public/css/forms.css">
+    <link rel="stylesheet" href="public/css/list.css">
+    <link rel="stylesheet" href="public/css/ticket.css">
+    {% endblock %}
+{% block main %}
+    {% include "elements/navbar.html.twig" %}
+    <div class="background-x5">
+        <div class="wrapper-tickets">
+            <main class=" d-flex flex-column align-items-center justify-content-around text-center">
+                <div class="info-contact">TEL Commercial  04 93 47 25 00</div>
+                <div class="info-contact">TEL SAV  04 93 90 51 80</div>
+                <h1 class="h1-myRecode col-7 mx-auto">Tickets 4725</h1>
+                <div class="info-contact my-1">En cours chez <b>Durant Pierre</b></div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+
+                    <div class="d-flex align-items-center card-myrecode">
+                        <div class="col-2 d-flex flex-column align-items-center justify-content-cente logo-div">
+                            <i class="fas fa-image fa-2x logo-div"></i>
+                        </div>
+                        <div class="col-7 d-flex flex-column align-items-start justify-content-start py-2 body-card">
+                            <div class="text-card">
+                                Psion XT15 s/n 452574541587 - K122 - PEGOMAS
+                            </div>
+                            <div class="text-card-mini text-success-recode">
+                                Maintenance Recode jusqu’au 15/05/2022
+                            </div>
+                            <div class="text-card">
+                                321158
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center green-card">
+                        <div class="col-2 d-flex flex-column align-items-center justify-content-cente logo-div">
+                        </div>
+                        <div class="col-7 d-flex flex-column align-items-center justify-content-center py-2 body-card">
+                            <div class="text-card tittle-green-card">
+                                Tactile + Scan HS 
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+{% endblock %}

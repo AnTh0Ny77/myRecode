@@ -5,6 +5,7 @@ use Src\Controllers\HomeController as home;
 use Src\Controllers\ClientController as client;
 use Src\Controllers\ConfirmUserController as confirm;
 use Src\Controllers\ResetPasswordController as reset;
+use Src\Controllers\TicketsController as ticket;
 use Src\Controllers\UserController as user;
 
 session_start();
@@ -60,7 +61,11 @@ switch ($globalRequest){
 
     case $config->base->url.'/list-user'.$getData:
         echo user::list();
-        break;    
+        break;  
+        
+    case $config->base->url.'/consult-ticket'.$getData:
+        echo ticket::consult();
+        break;  
 
     default:
         header('HTTP/1.0 404 not found');

@@ -34,7 +34,7 @@ input::-webkit-input-placeholder { /* WebKit browsers */
     text-align: left;
 }
 
-@media (max-width:900px){
+@media (max-width:1275px){
     .input-myrecode-forms{
         width: 250px;
         height: 52px;
