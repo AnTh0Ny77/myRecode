@@ -1,8 +1,9 @@
 .sidebar{
     overflow: hidden;
     position: fixed;
+    left: 0;
     min-width: 380px;
-    z-index: 1;
+    z-index: 3;
     height: 100%;
     background: #444444;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -12,7 +13,7 @@
 }
 
 .interlocuteur{
-    margin-top: 160px;
+    margin-top: 16px;
     width: 100%;
 }
 
@@ -106,11 +107,42 @@
         position: relative;
         min-width: 100%;
         height: auto;
+        z-index: 3 !important;
         background: transparent;
         box-shadow: none;
         display: flex;
         flex-direction: column;
         color: #FFFFFF;
+    }
+
+    .titre-interlocuteur{
+        margin: 5px auto;
+        text-align: center;
+        width: 100%;
+        font-family: 'Open Sans Hebrew';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 27px;
+        color: #FFFFFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .interlocuteur{
+        margin-top: 20px !important;
+        margin: auto;
+        text-align: center;
+    }
+    
+
+    .info-commercial{
+        font-family: 'Open Sans Hebrew';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 27px;
+        color: #FFFFFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     
 }

@@ -46,3 +46,15 @@
     height: 279px;
 }
 
+
+@media (max-width:900px){
+    .wrapper-offre{ 
+        margin-top: 25px;
+        margin-bottom: 25px;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+
